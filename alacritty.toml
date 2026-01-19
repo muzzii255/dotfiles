@@ -1,0 +1,13 @@
+[window]
+opacity = 0.60
+
+[font]
+size = 9.0
+[selection]
+save_to_clipboard = true
+
+
+[general]
+import = [
+    "/home/muzzii/.config/alacritty/themes/themes/hyper.toml"
+]

@@ -1,0 +1,44 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl ctrl": "editor::Hover",
+      "alt-b": "editor::BlameHover",
+      "ctrl-r": "editor::GoToDefinition",
+      "alt-d": "editor::DeleteLine",
+      "alt-a": ["editor::SelectToBeginningOfLine", { "stop_at_soft_wraps": true, "stop_at_indent": true }],
+      "alt-s": ["editor::SelectToEndOfLine", { "stop_at_soft_wraps": true }],
+      "shift shift": "outline::Toggle",
+      "alt-e": "editor::GoToDiagnostic",
+      "alt-w": "diagnostics::Deploy",
+      "alt-q": "editor::MoveToEnclosingBracket",
+      "ctrl-alt-up": [
+        "editor::MoveToBeginningOfLine",
+        {
+          "stop_at_soft_wraps": true,
+          "stop_at_indent": true,
+        },
+      ],
+      "ctrl-alt-down": [
+        "editor::MoveToEndOfLine",
+        {
+          "stop_at_soft_wraps": true,
+        },
+      ],
+      // "j k": "vim::NormalBefore"
+    },
+  },
+]
