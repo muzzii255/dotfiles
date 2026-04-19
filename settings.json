@@ -1,105 +1,118 @@
 {
-  "scroll_beyond_last_line": "one_page",
-  "sticky_scroll": {
-    "enabled": true,
-  },
-  "fast_scroll_sensitivity": 15.0,
-  "horizontal_scroll_margin": 10.0,
-  "vertical_scroll_margin": 200.0,
-  "icon_theme": "Colored Zed Icons Theme Dark",
-  "ui_font_size": 12,
-  "buffer_font_size": 12,
-  "tab_size": 2,
-  "theme": {
-    "mode": "system",
-    "light": "Transparent Catppuccin Dark",
-    "dark": "Transparent Catppuccin",
-  },
-  "autosave": { "after_delay": { "milliseconds": 50 } },
-  "disable_ai": true,
+    "completions": {
+        "lsp_fetch_timeout_ms": 0
+    },
+    "diagnostics_max_severity": "all",
+    "document_symbols": "on",
+    "document_folding_ranges": "on",
+    "semantic_tokens": "off",
+    "scroll_beyond_last_line": "one_page",
+    "format_on_save": "on",
+    "soft_wrap": "preferred_line_length",
+    "preferred_line_length": 170,
+    "show_wrap_guides": true,
+    "inlay_hints": {
+        "enabled": true,
+        "show_type_hints": false,
+        "show_parameter_hints": false,
+        "show_value_hints": true,
+        "show_other_hints": true,
+        "show_background": true,
+        "edit_debounce_ms": 700,
+        "scroll_debounce_ms": 50,
+        "toggle_on_modifiers_press": {
+            "control": false,
+            "shift": false,
+            "alt": false,
+            "platform": false,
+            "function": false
+        }
+    },
 
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false,
-  },
-  "diagnostics": {
-    "button": true,
-    "include_warnings": true,
-    "lsp_pull_diagnostics": {
-      "enabled": true,
-      "debounce_ms": 50,
+    "sticky_scroll": {
+        "enabled": true
     },
-    "inline": {
-      "enabled": true,
-      "update_debounce_ms": 150,
-      "padding": 4,
-      "min_column": 0,
-      "max_severity": null,
+    "fast_scroll_sensitivity": 15.0,
+    "horizontal_scroll_margin": 10.0,
+    "vertical_scroll_margin": 200.0,
+    "icon_theme": {
+        "mode": "light",
+        "light": "Colored Zed Icons Theme Dark",
+        "dark": "Colored Zed Icons Theme Dark"
     },
-  },
-  "prettier": {
-    "allowed": true,
-    "plugins": [],
-    "parser": "",
-  },
-  "format_on_save": "on",
-  "preferred_line_length": 130,
-  "inlay_hints": {
-    "enabled": true,
-    "show_type_hints": true,
-    "show_parameter_hints": true,
-    "show_value_hints": true,
-    "show_other_hints": true,
-    "show_background": false,
-    "edit_debounce_ms": 700,
-    "scroll_debounce_ms": 50,
-    "toggle_on_modifiers_press": {
-      "control": false,
-      "shift": false,
-      "alt": false,
-      "platform": false,
-      "function": false,
+    "ui_font_size": 16,
+    "buffer_font_size": 13.5,
+    "tab_size": 4,
+    "theme": {
+        "mode": "dark",
+        "light": "Transparent Catppuccin Dark",
+        "dark": "Transparent Catppuccin"
     },
-  },
-  "lsp": {
-    "gopls": {
-      // "gofumpt": true,
-      "initialization_options": {
-        "staticcheck": true,
-        "experimentalPostfixCompletions": true,
-        "formatting.gofumpt": true,
-        "codelenses": {
-          "gc_details": true,
+    "autosave": { "after_delay": { "milliseconds": 50 } },
+    "disable_ai": true,
+
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false
+    },
+    "diagnostics": {
+        "button": true,
+        "include_warnings": true,
+        "lsp_pull_diagnostics": {
+            "enabled": true,
+            "debounce_ms": 50
         },
-        "hints": {
-          "assignVariableTypes": true,
-          "compositeLiteralFields": true,
-          "compositeLiteralTypes": true,
-          "constantValues": true,
-          "functionTypeParameters": true,
-          "parameterNames": true,
-          "rangeVariableTypes": true,
-        },
-        "analyses": {
-          "nilness": true,
-          "unusedparams": true,
-          "unusedvariable": true,
-          "unusedwrite": true,
-          "useany": true,
-          "ST1000": false,
-          "ST1020": false,
-          "ST1003": false,
-        },
-      },
+        "inline": {
+            "enabled": true,
+            "update_debounce_ms": 150,
+            "padding": 4,
+            "min_column": 0,
+            "max_severity": null
+        }
     },
-  },
-  "languages": {
-    "Go": {
-      "format_on_save": "on",
-      "formatter": "language_server",
-      "code_actions_on_format": {
-        "source.organizeImports": true,
-      },
+    "prettier": {
+        "allowed": true,
+        "plugins": [],
+        "parser": ""
     },
-  },
+    "lsp": {
+        "gopls": {
+            "initialization_options": {
+                "staticcheck": true,
+                "experimentalPostfixCompletions": true,
+                "formatting.gofumpt": true,
+                "codelenses": {
+                    "gc_details": true
+                },
+                "hints": {
+                    "assignVariableTypes": true,
+                    "compositeLiteralFields": true,
+                    "compositeLiteralTypes": true,
+                    "constantValues": true,
+                    "functionTypeParameters": true,
+                    "parameterNames": true,
+                    "rangeVariableTypes": true
+                },
+                "analyses": {
+                    "nilness": true,
+                    "unusedparams": true,
+                    "unusedvariable": true,
+                    "unusedwrite": true,
+                    "useany": true,
+                    "ST1000": false,
+                    "ST1020": false,
+                    "ST1003": false
+                }
+            }
+        }
+    },
+    "languages": {
+        "Go": {
+            "format_on_save": "on",
+            "formatter": "language_server",
+            "code_actions_on_format": {
+                "source.organizeImports": true
+            }
+        }
+    }
 }
